@@ -751,14 +751,10 @@ class StudentService{
         }
     }
     studentsCredits(students, credits){
-        const studentsWithCredits = students.filter(student => student.credits >= credits);
-        if(credits >= 500){
-            return studentsWithCredits
-        }
-        else{
-            return studentsWithCredits
-        }
+        const allStudentsCredits = students.filter((student) => student.credits >= credits).map((student) => student);
+        return allStudentsCredits
     }
+
 }
 module.exports = StudentService
 ```
@@ -779,10 +775,10 @@ describe("Student Controller Unit Test", () => {
         expect(SC.getAllStudents().length).toBe(51)
     })
     test('Requerimiento 2: Consultar todos los estudiantes que tengan haveCertification = true', () => {
-        expect(SC.getStudentsWithCertification(true).length).toBe(29)
+        expect(SC.getStudentsEmailsWithCertification().length).toBe(29)
     })
     test('Requerimiento 3: Consultar todos los estudiantes que tengan credits mayor a 500', () => {
-        expect(SC.getAllStudentsWithCredits(500).length).toBe(27)
+        expect(SC.getAllStudentsWithCredits().length).toBe(27)
     })
 
 })
@@ -804,21 +800,17 @@ class StudentController {
         const allStudents = studentsReader.readJsonPath("./students.json")
         return allStudents
     }
-    getStudentsWithCertification(){
+    getStudentsEmailsWithCertification(){
         const haveCertification = true
         const allStudents = studentsReader.readJsonPath("./students.json")
         const allStudentsWithCertification = studentsServices.studentsWithCertification(allStudents, haveCertification);
-        return allStudentsWithCertification
+        const allStudentsEmailsWithCentification = allStudentsWithCertification.map(student => student.email);
+        return allStudentsEmailsWithCentification
     }
-    getAllStudentsWithCredits(credits){
-        if(credits >=500){
-            const allStudents = studentsReader.readJsonPath("./students.json")
-            const allStudentsWithCredits = studentsServices.studentsCredits(allStudents, credits);
-            return allStudentsWithCredits
-        }
-        else{
-            return alert("Los estudiantes no tienen los créditos suficientes")
-        }
+    getAllStudentsWithCredits(){
+        const allStudents = studentsReader.readJsonPath("./students.json")
+        const allStudentsWithCredits = studentsServices.studentsCredits(allStudents, 500)
+        return allStudentsWithCredits
     }
 }
 
