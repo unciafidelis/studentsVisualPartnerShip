@@ -22,7 +22,7 @@ El por qué se integró el archivo test.yml y sus permisos hasta final fué un p
 7. Instalar linter `npm install eslint --save-dev`
 
 #### Test.yml
-```markdown
+```javascript
 	name: Run Tests in my project every push on GitHub
 
 on: [push]
