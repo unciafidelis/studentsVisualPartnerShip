@@ -710,3 +710,54 @@ module.exports = Reader;
 19. Correr test `npm test test/lib/utils/Reader.test.js`
 
 ![Reader Unit Test](./assets/img/ReaderTestPassed.png)
+
+20. Crear carpeta `/test/lib/services`
+21. Crear archivo `/test/lib/services/StudentService.test.js`
+
+#### StudentService.test.js
+
+```javascript
+const Reader = require("../../../lib/utils/Reader");
+const StudentService = require("../../../lib/services/StudentService");
+const students = new Reader
+const SS = new StudentService
+describe("StudentService Unit Tests", () => {
+    test('Requerimiento 2: Consultar todos los estudiantes que tengan haveCertification = true', () => {
+        const studentsService = students.readJsonPath("./students.json")
+        expect(SS.studentsWithCertification(studentsService, true).length).toBe(29)
+    })
+    test('Requerimiento 3: Consultar todos los estudiantes que tengan credits mayor a 500', () => {
+        const studentsService = students.readJsonPath("./students.json")
+        expect(SS.studentsCredits(studentsService, 500).length).toBe(27)
+    })
+})
+
+```
+22. Crear carpeta `lib/services`
+23. Crear archivo `/lib/services/StudentService.js`
+
+#### StudentService.js
+
+```javascript
+class StudentService{
+    studentsWithCertification(students, haveCertification){
+        const studentsWithCertification = students.filter(student => student.haveCertification === haveCertification);
+        if(haveCertification === true){
+            return studentsWithCertification
+        }
+        else{
+            return studentsWithCertification
+        }
+    }
+    studentsCredits(students, credits){
+        const studentsWithCredits = students.filter(student => student.credits >= credits);
+        if(credits >= 500){
+            return studentsWithCredits
+        }
+        else{
+            return studentsWithCredits
+        }
+    }
+}
+module.exports = StudentService
+```
