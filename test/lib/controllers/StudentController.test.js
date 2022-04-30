@@ -6,10 +6,10 @@ describe("Student Controller Unit Test", () => {
         expect(SC.getAllStudents().length).toBe(51)
     })
     test('Requerimiento 2: Consultar todos los estudiantes que tengan haveCertification = true', () => {
-        expect(SC.getStudentsWithCertification(true).length).toBe(29)
+        expect(SC.getStudentsEmailsWithCertification().length).toBe(29)
     })
     test('Requerimiento 3: Consultar todos los estudiantes que tengan credits mayor a 500', () => {
-        expect(SC.getAllStudentsWithCredits(500).length).toBe(27)
+        expect(SC.getAllStudentsWithCredits().length).toBe(27)
     })
 
 })
