@@ -2,6 +2,10 @@
 Code challenge - Visual Partner-Ship students endpoints Express
 -Commits in english
 
+### Tiempo de desarrollo 4 horas y 20 min
+### 1er commit 10:10 30 de abril del 2022
+### último commit 14:46 30 de abril del 2022
+
 Nuevo Proyecto node js, jest y express
 
 1. Iniciar nuevo proyecto con node `npm init` (crea package.json)
