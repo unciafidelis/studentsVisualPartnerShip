@@ -1,7 +1,8 @@
 # studentsVisualPartnerShip
 Code challenge - Visual Partner-Ship students endpoints Express
+-Commits in english
 
-New Proyectiva node js and express
+Nuevo Proyecto node js, jest y express
 
 1. Iniciar nuevo proyecto con node `npm init` (crea package.json)
 2. Instalar package de pruebas `npm install --save-dev jest`
