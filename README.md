@@ -783,6 +783,8 @@ describe("Student Controller Unit Test", () => {
 
 })
 ```
+![StudentService Unit Test](./assets/img/StudentServiceTestPassed.png)
+
 26. Crear la carpeta `lib/controllers`
 27. Crear el archivo `/lib/controllers/StudentController.js`
 
@@ -819,3 +821,4 @@ class StudentController {
 
 module.exports = StudentController
 ```
+![StudentService Unit Test](./assets/img/StudentControllerTestPassed.png)
