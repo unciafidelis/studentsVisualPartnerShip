@@ -11,9 +11,9 @@ Nuevo Proyecto node js, jest y express
 1. Crear carpetas `.github/workflows` directamente en github (En este proyecto fue creada al final por encontrar un error de acceso por token personal que no se pudo solucionar desde el git local)
 2. crear archivo `.github/workflows/test.yml` directamente en github (En este proyecto fue creado al final por encontrar un error de acceso por token personal que no se pudo solucionar desde el git local)
 
-```markdown
+`
 El por qué se integró el archivo test.yml y sus permisos hasta final fué un problema de permisos del personal token en el workflow, sin embargo se continuó sin esta funcionalidad hasta la culminación de los endpoints, en proyectos posteriores el archivo test.yml y su esquema de carpetas se deben agregar primero directamente en github y después realizar la clonación para conveniencia del usuario y poder realizar cambios e integrar los workflows desde el principio.
-```
+`
 
 
 4. Iniciar nuevo proyecto con node `npm init` (crea package.json)
