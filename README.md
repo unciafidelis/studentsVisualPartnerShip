@@ -761,8 +761,11 @@ class StudentService{
 }
 module.exports = StudentService
 ```
-24. Crear la carpeta `test/controllers`
-25. Crear el archivo `/test/controllers/StudentController.test.js`
+
+24. Correr test `npm test test/lib/services/StudentService.test.js`
+![StudentService Unit Test](./assets/img/StudentServiceTestPassed.png)
+25. Crear la carpeta `test/controllers`
+26. Crear el archivo `/test/controllers/StudentController.test.js`
 
 #### StudentController.test.js
 
@@ -783,10 +786,9 @@ describe("Student Controller Unit Test", () => {
 
 })
 ```
-![StudentService Unit Test](./assets/img/StudentServiceTestPassed.png)
 
-26. Crear la carpeta `lib/controllers`
-27. Crear el archivo `/lib/controllers/StudentController.js`
+27. Crear la carpeta `lib/controllers`
+28. Crear el archivo `/lib/controllers/StudentController.js`
 
 #### StudentController.js
 
@@ -821,4 +823,5 @@ class StudentController {
 
 module.exports = StudentController
 ```
+29. Correr test `npm test test/controllers/StudentController.test.js`
 ![StudentService Unit Test](./assets/img/StudentControllerTestPassed.png)
