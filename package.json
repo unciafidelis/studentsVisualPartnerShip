@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/unciafidelis/studentsVisualPartnerShip/issues"
   },
-  "homepage": "https://github.com/unciafidelis/studentsVisualPartnerShip#readme"
+  "homepage": "https://github.com/unciafidelis/studentsVisualPartnerShip#readme",
+  "devDependencies": {
+    "jest": "^26.0.0"
+  }
 }
