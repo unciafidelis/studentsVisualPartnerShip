@@ -1,0 +1,19 @@
+{
+  "name": "studentsvisualpartnership",
+  "version": "1.0.0",
+  "description": "Code challenge - Visual Partner-Ship students endpoints Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unciafidelis/studentsVisualPartnerShip.git"
+  },
+  "author": "Alejandro Morgan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unciafidelis/studentsVisualPartnerShip/issues"
+  },
+  "homepage": "https://github.com/unciafidelis/studentsVisualPartnerShip#readme"
+}
